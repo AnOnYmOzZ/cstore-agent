@@ -1,5 +1,14 @@
 #! /usr/bin/python3
 
+"""!
+    @file   cstore-agent/agent.py
+    @brief  Cstore Agent
+    @desc   This application runs on a client (raspberry pi), the client pings the server periodically. 
+            The message contains it's ID (mac address) which the server uses to 
+            register the client and send assigned tasks if it was a new client
+"""
+
+
 import requests
 import os, sys
 import re, uuid
