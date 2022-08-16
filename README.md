@@ -16,7 +16,7 @@
 	3. Push back to repo 
 	
 5. Modify the python app config file accordingly 
-	1. ansible-pull command and the git repo to pull ansible yaml file from 
-	2. endpoint for registering agent 
+	1. on cstore-commandcenter: ansible-pull command and the git repo to pull ansible yaml file from 
+	2. on cstore-agent: endpoint for registering agent 
 	
 6. Update cron job "rc.local" to suit your application
