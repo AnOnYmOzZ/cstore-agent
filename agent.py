@@ -11,7 +11,7 @@ def run():
     logging.info("---- Starting | param ----")
     #important variables
     mac_addr = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
-    endpoint = "http://192.168.8.100:5001/heartbeat"
+    endpoint = "http://192.168.147.1:5002/heartbeat"
     payload = {'mac_addr':mac_addr}
     ansible_pull_cmd = "sudo ansible-pull -U https://github.com/cliffordolaw/ansible-pull-sample-task.git"
 
