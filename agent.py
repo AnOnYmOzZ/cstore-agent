@@ -15,13 +15,15 @@ import os, sys
 import re, uuid
 import logging
 
+import config
+
 logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', level=logging.INFO) 
 
 def run():
     logging.info("---- Starting | param ----")
     #important variables
     mac_addr = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
-    endpoint = "http://192.168.147.1:5002/heartbeat"
+    endpoint = config.CMD_CENTER_URL + "/agent/heartbeat"
     payload = {'mac_addr':mac_addr}
     
     #Send request to web server    
